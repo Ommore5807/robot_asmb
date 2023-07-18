@@ -1,0 +1,2504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_asmb">
+  <link
+    name="mid_right_chassis">
+    <inertial>
+      <origin
+        xyz="-1.01904958862805 0.450918359101979 2.53097602022226"
+        rpy="0 0 0" />
+      <mass
+        value="0.664323169148694" />
+      <inertia
+        ixx="0.124497537684337"
+        ixy="1.03440379130568E-07"
+        ixz="3.29978112885734E-09"
+        iyy="0.000272415804836353"
+        iyz="1.06181136709888E-05"
+        izz="0.124497811349337" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_chasiss">
+    <inertial>
+      <origin
+        xyz="-1.019 -1.0491 2.531"
+        rpy="0 0 0" />
+      <mass
+        value="0.66432" />
+      <inertia
+        ixx="0.1245"
+        ixy="1.0344E-07"
+        ixz="3.2998E-09"
+        iyy="0.00027242"
+        iyz="1.0618E-05"
+        izz="0.1245" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_chasiss.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_chasiss.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_chasiss_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_chassis" />
+    <child
+      link="front_right_chasiss" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_leg_U">
+    <inertial>
+      <origin
+        xyz="-1.0188 -1.3678 2.4655"
+        rpy="0 0 0" />
+      <mass
+        value="0.014956" />
+      <inertia
+        ixx="2.7738E-05"
+        ixy="6.6298E-08"
+        ixz="-1.4085E-07"
+        iyy="2.6019E-05"
+        iyz="9.8022E-06"
+        izz="6.6023E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_chasiss" />
+    <child
+      link="front_right_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="front_right_tube_U">
+    <inertial>
+      <origin
+        xyz="-1.01905295857089 -1.13101223223748 1.8489163620188"
+        rpy="0 0 0" />
+      <mass
+        value="0.182771130925098" />
+      <inertia
+        ixx="0.0288040809667445"
+        ixy="9.63377608534002E-11"
+        ixz="9.56241995791516E-10"
+        iyy="0.0251890586766504"
+        iyz="0.00953453675325091"
+        izz="0.00365156274245493" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_leg_U" />
+    <child
+      link="front_right_tube_U" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_leg_L">
+    <inertial>
+      <origin
+        xyz="-1.0188 -0.90796 1.145"
+        rpy="0 0 0" />
+      <mass
+        value="0.01493" />
+      <inertia
+        ixx="2.774E-05"
+        ixy="-7.7596E-08"
+        ixz="-1.3526E-07"
+        iyy="2.2174E-05"
+        iyz="-1.249E-05"
+        izz="1.045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_tube_U" />
+    <child
+      link="front_right_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="front_right_tube_L">
+    <inertial>
+      <origin
+        xyz="-1.01905401460237 -1.28409621956361 0.588700568006992"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724338" />
+      <inertia
+        ixx="0.029708183532636"
+        ixy="1.92050090340119E-09"
+        ixz="-3.49198418580796E-10"
+        iyy="0.0202824973957912"
+        iyz="-0.0138136026996856"
+        izz="0.00946309533534886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_leg_L" />
+    <child
+      link="front_right_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_lin_L">
+    <inertial>
+      <origin
+        xyz="-1.01905398973371 -1.05856041000549 1.28353152778218"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490506" />
+      <inertia
+        ixx="0.00416138616901156"
+        ixy="1.083705915601E-11"
+        ixz="-6.72096977614076E-13"
+        iyy="0.00407663775933377"
+        iyz="4.83120097697742E-05"
+        izz="0.000139424820480645" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_lin_L_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_tube_L" />
+    <child
+      link="front_right_lin_L" />
+    <axis
+      xyz="0 0.074398 0.99723" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="front_right_lin_U">
+    <inertial>
+      <origin
+        xyz="-1.01905001026629 -1.5543044722572 2.350205150956"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490508" />
+      <inertia
+        ixx="0.00416138616901158"
+        ixy="7.16619284850076E-12"
+        ixz="8.15715903343734E-12"
+        iyy="0.00147423457571944"
+        iyz="0.00186441604988219"
+        izz="0.002741828004095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_right_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_lin_U_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_chasiss" />
+    <child
+      link="front_right_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="chassis_front_H">
+    <inertial>
+      <origin
+        xyz="3.27515792264421E-15 -1.78095 2.53095"
+        rpy="0 0 0" />
+      <mass
+        value="0.887094999999999" />
+      <inertia
+        ixx="0.000363660529397914"
+        ixy="1.08241861026975E-18"
+        ixz="-2.08166283043256E-17"
+        iyy="0.295880163598033"
+        iyz="2.84848404238865E-20"
+        izz="0.295880163598033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/chassis_front_H.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/chassis_front_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chassis_front_H_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_chasiss" />
+    <child
+      link="chassis_front_H" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_left_chassis">
+    <inertial>
+      <origin
+        xyz="1.0191 -1.0491 2.531"
+        rpy="0 0 0" />
+      <mass
+        value="0.66432" />
+      <inertia
+        ixx="0.1245"
+        ixy="1.0344E-07"
+        ixz="3.2998E-09"
+        iyy="0.00027242"
+        iyz="1.0618E-05"
+        izz="0.1245" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_chassis_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_front_H" />
+    <child
+      link="front_left_chassis" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_left_leg_U">
+    <inertial>
+      <origin
+        xyz="1.01928704719084 -1.36780266158664 2.46553433810281"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149562493818225" />
+      <inertia
+        ixx="2.77383068609028E-05"
+        ixy="6.62980830784022E-08"
+        ixz="-1.40854477763515E-07"
+        iyy="2.60191233053183E-05"
+        iyz="9.80223130891786E-06"
+        izz="6.60232835543142E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_chassis" />
+    <child
+      link="front_left_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="front_left_tube_U">
+    <inertial>
+      <origin
+        xyz="1.01904704142911 -1.1310122322375 1.84891636201878"
+        rpy="0 0 0" />
+      <mass
+        value="0.182771130925134" />
+      <inertia
+        ixx="0.0288040809667479"
+        ixy="9.63377580647287E-11"
+        ixz="9.56242001787765E-10"
+        iyy="0.0251890586766536"
+        iyz="0.00953453675325202"
+        izz="0.00365156274245511" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_leg_U" />
+    <child
+      link="front_left_tube_U" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_left_leg_L">
+    <inertial>
+      <origin
+        xyz="1.0193 -0.90796 1.145"
+        rpy="0 0 0" />
+      <mass
+        value="0.01493" />
+      <inertia
+        ixx="2.774E-05"
+        ixy="-7.7596E-08"
+        ixz="-1.3526E-07"
+        iyy="2.2174E-05"
+        iyz="-1.249E-05"
+        izz="1.045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_tube_U" />
+    <child
+      link="front_left_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="front_left_tube_L">
+    <inertial>
+      <origin
+        xyz="1.01904598539763 -1.28409621956371 0.588700568006984"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724287" />
+      <inertia
+        ixx="0.0297081835326322"
+        ixy="1.92050090037981E-09"
+        ixz="-3.49198421587199E-10"
+        iyy="0.0202824973957875"
+        iyz="-0.0138136026996845"
+        izz="0.00946309533534876" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_leg_L" />
+    <child
+      link="front_left_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_left_lin_L">
+    <inertial>
+      <origin
+        xyz="1.019 -1.0586 1.2835"
+        rpy="0 0 0" />
+      <mass
+        value="0.3936" />
+      <inertia
+        ixx="0.0041614"
+        ixy="1.0837E-11"
+        ixz="-6.721E-13"
+        iyy="0.0040766"
+        iyz="4.8312E-05"
+        izz="0.00013942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_lin_L_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_tube_L" />
+    <child
+      link="front_left_lin_L" />
+    <axis
+      xyz="0 0.074398 0.99723" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="front_left_lin_U">
+    <inertial>
+      <origin
+        xyz="1.01904998973371 -1.55430447225721 2.35020515095598"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490506" />
+      <inertia
+        ixx="0.00416138616901156"
+        ixy="7.16619285958923E-12"
+        ixz="8.15715903791734E-12"
+        iyy="0.00147423457571944"
+        iyz="0.00186441604988218"
+        izz="0.00274182800409498" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/front_left_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_lin_U_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_chassis" />
+    <child
+      link="front_left_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="mid_left_chassis">
+    <inertial>
+      <origin
+        xyz="1.01905041137195 0.450918359101979 2.53097602022227"
+        rpy="0 0 0" />
+      <mass
+        value="0.664323169148684" />
+      <inertia
+        ixx="0.124497537684335"
+        ixy="1.03440379130001E-07"
+        ixz="3.29978112884355E-09"
+        iyy="0.000272415804836349"
+        iyz="1.06181136709885E-05"
+        izz="0.124497811349336" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_chassis_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_chassis" />
+    <child
+      link="mid_left_chassis" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mid_left_leg_U">
+    <inertial>
+      <origin
+        xyz="1.01928704719084 0.132197338413356 2.4655343381028"
+        rpy="0 0 0" />
+      <mass
+        value="0.014956249381823" />
+      <inertia
+        ixx="2.77383068609036E-05"
+        ixy="6.62980830784294E-08"
+        ixz="-1.40854477763544E-07"
+        iyy="2.60191233053191E-05"
+        iyz="9.80223130891822E-06"
+        izz="6.60232835543189E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_chassis" />
+    <child
+      link="mid_left_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="mid_left_tube_U">
+    <inertial>
+      <origin
+        xyz="1.01904704142911 0.368987767762493 1.84891636201879"
+        rpy="0 0 0" />
+      <mass
+        value="0.182771130925109" />
+      <inertia
+        ixx="0.0288040809667452"
+        ixy="9.63377617990378E-11"
+        ixz="9.56241993028199E-10"
+        iyy="0.0251890586766513"
+        iyz="0.00953453675325123"
+        izz="0.00365156274245477" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_leg_U" />
+    <child
+      link="mid_left_tube_U" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mid_left_leg_L">
+    <inertial>
+      <origin
+        xyz="1.0193 0.59204 1.145"
+        rpy="0 0 0" />
+      <mass
+        value="0.01493" />
+      <inertia
+        ixx="2.774E-05"
+        ixy="-7.7596E-08"
+        ixz="-1.3526E-07"
+        iyy="2.2174E-05"
+        iyz="-1.249E-05"
+        izz="1.045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_tube_U" />
+    <child
+      link="mid_left_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="mid_left_tube_L">
+    <inertial>
+      <origin
+        xyz="1.01904598539763 0.215903780436281 0.588700568006971"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724323" />
+      <inertia
+        ixx="0.0297081835326349"
+        ixy="1.92050090363921E-09"
+        ixz="-3.49198416491831E-10"
+        iyy="0.0202824973957893"
+        iyz="-0.0138136026996857"
+        izz="0.00946309533534962" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_leg_L" />
+    <child
+      link="mid_left_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mid_left_lin_L">
+    <inertial>
+      <origin
+        xyz="1.01904601026629 0.44143958999443 1.28353152778214"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490507" />
+      <inertia
+        ixx="0.00416138616901156"
+        ixy="1.08370592958743E-11"
+        ixz="-6.7209774882494E-13"
+        iyy="0.00407663775933377"
+        iyz="4.83120097695795E-05"
+        izz="0.000139424820480641" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_lin_L_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_tube_L" />
+    <child
+      link="mid_left_lin_L" />
+    <axis
+      xyz="0 0.074398 0.99723" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="mid_left_lin_U">
+    <inertial>
+      <origin
+        xyz="1.01904998973371 -0.0543044722572099 2.35020515095598"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490506" />
+      <inertia
+        ixx="0.00416138616901155"
+        ixy="7.16619286639427E-12"
+        ixz="8.15715903066188E-12"
+        iyy="0.00147423457571943"
+        iyz="0.00186441604988217"
+        izz="0.00274182800409498" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_left_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_left_lin_U_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_chassis" />
+    <child
+      link="mid_left_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="rear_left_chassis">
+    <inertial>
+      <origin
+        xyz="1.01905103075279 1.50060706291822 2.53101519748497"
+        rpy="0 0 0" />
+      <mass
+        value="0.26513041914869" />
+      <inertia
+        ixx="0.00799926371862993"
+        ixy="-1.96224566105394E-08"
+        ixz="3.31048764477828E-09"
+        iyy="0.000108767889226196"
+        iyz="2.83410622334487E-06"
+        izz="0.00799953806067313" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_chassis_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_left_chassis" />
+    <child
+      link="rear_left_chassis" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_left_leg_U">
+    <inertial>
+      <origin
+        xyz="1.01928704719084 1.63219733841335 2.46553433810282"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149562493818264" />
+      <inertia
+        ixx="2.77383068609057E-05"
+        ixy="6.62980830784682E-08"
+        ixz="-1.40854477763676E-07"
+        iyy="2.60191233053206E-05"
+        iyz="9.80223130891918E-06"
+        izz="6.60232835543248E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_chassis" />
+    <child
+      link="rear_left_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="rear_left_tube_U">
+    <inertial>
+      <origin
+        xyz="1.019 1.869 1.8489"
+        rpy="0 0 0" />
+      <mass
+        value="0.18277" />
+      <inertia
+        ixx="0.028804"
+        ixy="9.6338E-11"
+        ixz="9.5624E-10"
+        iyy="0.025189"
+        iyz="0.0095345"
+        izz="0.0036516" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_leg_U" />
+    <child
+      link="rear_left_tube_U" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_left_leg_L">
+    <inertial>
+      <origin
+        xyz="1.01928761122876 2.0920375529714 1.1449974945424"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149300116301178" />
+      <inertia
+        ixx="2.77403593155305E-05"
+        ixy="-7.75956668190196E-08"
+        ixz="-1.3525797230188E-07"
+        iyy="2.21736408459225E-05"
+        iyz="-1.2490241982077E-05"
+        izz="1.04501101237391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_tube_U" />
+    <child
+      link="rear_left_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="rear_left_tube_L">
+    <inertial>
+      <origin
+        xyz="1.01904598539763 1.71590378043627 0.588700568006958"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724339" />
+      <inertia
+        ixx="0.0297081835326356"
+        ixy="1.92050090383557E-09"
+        ixz="-3.49198417708417E-10"
+        iyy="0.0202824973957898"
+        iyz="-0.0138136026996862"
+        izz="0.00946309533534985" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_leg_L" />
+    <child
+      link="rear_left_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_left_lin_L">
+    <inertial>
+      <origin
+        xyz="1.01904601026629 1.94143958999443 1.28353152778214"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490506" />
+      <inertia
+        ixx="0.00416138616901158"
+        ixy="1.08370592774062E-11"
+        ixz="-6.72097866874209E-13"
+        iyy="0.0040766377593338"
+        iyz="4.83120097695809E-05"
+        izz="0.000139424820480641" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_lin_L_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_tube_L" />
+    <child
+      link="rear_left_lin_L" />
+    <axis
+      xyz="0 0.074398 0.99723" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="rear_left_lin_U">
+    <inertial>
+      <origin
+        xyz="1.01904998973371 1.44569552774279 2.35020515095598"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490503" />
+      <inertia
+        ixx="0.00416138616901153"
+        ixy="7.16619283655413E-12"
+        ixz="8.15715901800019E-12"
+        iyy="0.00147423457571942"
+        iyz="0.00186441604988216"
+        izz="0.00274182800409496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_left_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_lin_U_J"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_chassis" />
+    <child
+      link="rear_left_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="chassis_rear_H">
+    <inertial>
+      <origin
+        xyz="3.21964677141295E-15 1.78095 2.53095"
+        rpy="0 0 0" />
+      <mass
+        value="0.887095000000013" />
+      <inertia
+        ixx="0.000363660529397919"
+        ixy="-1.88130810611711E-19"
+        ixz="-1.70530011629058E-17"
+        iyy="0.295880163598037"
+        iyz="3.4721814085673E-20"
+        izz="0.295880163598037" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/chassis_rear_H.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/chassis_rear_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chassis_rear_H_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_chassis" />
+    <child
+      link="chassis_rear_H" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_chassisb">
+    <inertial>
+      <origin
+        xyz="-1.01904896924721 1.50060706291822 2.53101519748497"
+        rpy="0 0 0" />
+      <mass
+        value="0.265130419148696" />
+      <inertia
+        ixx="0.0079992637186302"
+        ixy="-1.96224566104091E-08"
+        ixz="3.31048764502081E-09"
+        iyy="0.000108767889226269"
+        iyz="2.83410622335826E-06"
+        izz="0.00799953806067333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_chassisb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_chassisb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_chassisb_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_rear_H" />
+    <child
+      link="rear_right_chassisb" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_chassis">
+    <inertial>
+      <origin
+        xyz="-1.01904896924721 1.50060706291822 2.53101519748497"
+        rpy="0 0 0" />
+      <mass
+        value="0.265130419148696" />
+      <inertia
+        ixx="0.0079992637186302"
+        ixy="-1.96224566104092E-08"
+        ixz="3.3104876450208E-09"
+        iyy="0.000108767889226269"
+        iyz="2.83410622335826E-06"
+        izz="0.00799953806067333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_chassis_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_chassis" />
+    <child
+      link="rear_right_chassis" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_leg_U">
+    <inertial>
+      <origin
+        xyz="-1.01881295280916 1.63219733841336 2.46553433810283"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149562493818249" />
+      <inertia
+        ixx="2.77383068609052E-05"
+        ixy="6.62980830783414E-08"
+        ixz="-1.40854477763533E-07"
+        iyy="2.60191233053202E-05"
+        iyz="9.80223130891883E-06"
+        izz="6.60232835543203E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_chassis" />
+    <child
+      link="rear_right_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="rear_right_tube_U">
+    <inertial>
+      <origin
+        xyz="-1.01905295857089 1.86898776776252 1.84891636201881"
+        rpy="0 0 0" />
+      <mass
+        value="0.182771130925097" />
+      <inertia
+        ixx="0.0288040809667441"
+        ixy="9.63377585135559E-11"
+        ixz="9.56242001298669E-10"
+        iyy="0.02518905867665"
+        iyz="0.00953453675325074"
+        izz="0.0036515627424549" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_leg_U" />
+    <child
+      link="rear_right_tube_U" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_leg_L">
+    <inertial>
+      <origin
+        xyz="-1.01881238877124 2.09203755297148 1.14499749454245"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149300116301128" />
+      <inertia
+        ixx="2.77403593155235E-05"
+        ixy="-7.75956668195453E-08"
+        ixz="-1.35257972302738E-07"
+        iyy="2.21736408459178E-05"
+        iyz="-1.2490241982075E-05"
+        izz="1.04501101237352E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_tube_U" />
+    <child
+      link="rear_right_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="rear_right_tube_L">
+    <inertial>
+      <origin
+        xyz="-1.01905401460237 1.71590378043638 0.588700568006989"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724346" />
+      <inertia
+        ixx="0.0297081835326365"
+        ixy="1.92050090159827E-09"
+        ixz="-3.49198420080449E-10"
+        iyy="0.0202824973957915"
+        iyz="-0.0138136026996858"
+        izz="0.00946309533534907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_leg_L" />
+    <child
+      link="rear_right_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_lin_L">
+    <inertial>
+      <origin
+        xyz="-1.01905398973371 1.94143958999451 1.28353152778218"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490507" />
+      <inertia
+        ixx="0.00416138616901158"
+        ixy="1.08370591962972E-11"
+        ixz="-6.72097199544717E-13"
+        iyy="0.00407663775933379"
+        iyz="4.83120097697753E-05"
+        izz="0.000139424820480647" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_lin_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_tube_L" />
+    <child
+      link="rear_right_lin_L" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="rear_right_lin_U">
+    <inertial>
+      <origin
+        xyz="-1.01905001026629 1.4456955277428 2.350205150956"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490505" />
+      <inertia
+        ixx="0.00416138616901157"
+        ixy="7.16619284096849E-12"
+        ixz="8.15715906395668E-12"
+        iyy="0.00147423457571944"
+        iyz="0.00186441604988218"
+        izz="0.00274182800409499" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/rear_right_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_lin_U_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_chassis" />
+    <child
+      link="rear_right_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="mid_right_leg_U">
+    <inertial>
+      <origin
+        xyz="-1.01881295280916 0.132197338413352 2.46553433810282"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149562493818268" />
+      <inertia
+        ixx="2.77383068609062E-05"
+        ixy="6.62980830786259E-08"
+        ixz="-1.40854477763992E-07"
+        iyy="2.60191233053204E-05"
+        iyz="9.80223130891981E-06"
+        izz="6.60232835543278E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_leg_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_leg_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_leg_U_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_chassis" />
+    <child
+      link="mid_right_leg_U" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.3307" />
+  </joint>
+  <link
+    name="mid_right_tube_U">
+    <inertial>
+      <origin
+        xyz="-1.01905295857089 0.368987767762518 1.84891636201881"
+        rpy="0 0 0" />
+      <mass
+        value="0.182771130925103" />
+      <inertia
+        ixx="0.0288040809667445"
+        ixy="9.63377575155421E-11"
+        ixz="9.56242003769553E-10"
+        iyy="0.0251890586766499"
+        iyz="0.00953453675325146"
+        izz="0.00365156274245535" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_tube_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_tube_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_tube_U_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_leg_U" />
+    <child
+      link="mid_right_tube_U" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="mid_right_leg_L">
+    <inertial>
+      <origin
+        xyz="-1.01881238877124 0.592037552971444 1.14499749454241"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149300116301118" />
+      <inertia
+        ixx="2.77403593155189E-05"
+        ixy="-7.75956668192706E-08"
+        ixz="-1.35257972302178E-07"
+        iyy="2.21736408459149E-05"
+        iyz="-1.24902419820747E-05"
+        izz="1.04501101237344E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_leg_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_leg_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_leg_L_j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_tube_U" />
+    <child
+      link="mid_right_leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0.349"
+      upper="-0.349"
+      effort="100"
+      velocity="1.8682" />
+  </joint>
+  <link
+    name="mid_right_tube_L">
+    <inertial>
+      <origin
+        xyz="-1.01905401460237 0.215903780436336 0.588700568006964"
+        rpy="0 0 0" />
+      <mass
+        value="0.185067675724338" />
+      <inertia
+        ixx="0.029708183532636"
+        ixy="1.9205009068834E-09"
+        ixz="-3.49198412898839E-10"
+        iyy="0.0202824973957906"
+        iyz="-0.0138136026996858"
+        izz="0.00946309533534944" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_tube_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_tube_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_tube_L_j"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_leg_L" />
+    <child
+      link="mid_right_tube_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mid_right_lin_L">
+    <inertial>
+      <origin
+        xyz="-1.01905398973372 0.441439589994471 1.28353152778215"
+        rpy="0 0 0" />
+      <mass
+        value="0.393600188490506" />
+      <inertia
+        ixx="0.00416138616901156"
+        ixy="1.08370591785241E-11"
+        ixz="-6.72097132499998E-13"
+        iyy="0.00407663775933377"
+        iyz="4.8312009769678E-05"
+        izz="0.000139424820480643" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_lin_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_lin_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_lin_L_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_tube_L" />
+    <child
+      link="mid_right_lin_L" />
+    <axis
+      xyz="0 0.074398 0.99723" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="mid_right_lin_U">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_lin_U.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_asmb/meshes/mid_right_lin_U.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_right_lin_U_j"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mid_right_chassis" />
+    <child
+      link="mid_right_lin_U" />
+    <axis
+      xyz="0 -0.75948 0.65054" />
+    <limit
+      lower="0.09"
+      upper="-0.09"
+      effort="1600"
+      velocity="0.5" />
+  </joint>
+</robot>
